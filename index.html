@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .container {
+            display: flex;
+            background: #f1f1f2;
+            padding: 50px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container .wrapper {
+            display: flex;
+            flex-direction: column;
+            /* width: 300px; */
+            /* align-items: center; */
+            justify-content: center;
+        }
+
+        .container .wrapper .top {
+            display: flex;
+        }
+
+        .container .wrapper .top .text {
+            margin-right: 5px;
+            padding: 10px;
+            width: 250px;
+        }
+
+        .container .wrapper .top .button {
+            background: #2f66ff;
+            border: 1px solid black;
+            border-radius: 3px;
+            width: 100px;
+            color: white;
+        }
+
+        .container .bottom {
+            margin-top: 10px;
+        }
+
+        .container .bottom .list {
+            /* margin: 10px; */
+            margin-bottom: 10px;
+        }
+
+        .container .bottom .list .todo {
+            background: #c9e4ff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            border-radius: 3px;
+        }
+
+        .container .bottom .list .todo .button {
+            background: #ff2f69;
+            /* padding: 10px; */
+            margin-left: 10px;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            /* padding: 10px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script src="./dist/bundle.js"></script>
+</body>
+
+</html>
