@@ -1,4 +1,5 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./index.js":
@@ -10,17 +11,16 @@
 /*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _react_ReactDom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./react/ReactDom */ "./react/ReactDom.js");
 /* harmony import */ var _react_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./react/utils */ "./react/utils.js");
-/* harmony import */ var _src2_main__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./src2/main */ "./src2/main.js");
+/* harmony import */ var _src_main__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./src/main */ "./src/main.js");
 
 
 
-const main = new _src2_main__WEBPACK_IMPORTED_MODULE_2__.default();
-_react_ReactDom__WEBPACK_IMPORTED_MODULE_0__.default.renderDom((0,_react_utils__WEBPACK_IMPORTED_MODULE_1__.getReactTree)(_src2_main__WEBPACK_IMPORTED_MODULE_2__.default), // <Main />
-document.getElementById('app'), _src2_main__WEBPACK_IMPORTED_MODULE_2__.default);
+const main = new _src_main__WEBPACK_IMPORTED_MODULE_2__.default();
+_react_ReactDom__WEBPACK_IMPORTED_MODULE_0__.default.renderDom((0,_react_utils__WEBPACK_IMPORTED_MODULE_1__.getReactTree)(_src_main__WEBPACK_IMPORTED_MODULE_2__.default), // <Main />
+document.getElementById('app'), _src_main__WEBPACK_IMPORTED_MODULE_2__.default);
 
 /***/ }),
 
@@ -34,7 +34,6 @@ document.getElementById('app'), _src2_main__WEBPACK_IMPORTED_MODULE_2__.default)
 /*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => /* binding */ Component
@@ -126,7 +125,6 @@ class Component {
 /*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "createElement": () => /* binding */ createElement,
@@ -213,7 +211,6 @@ const React = {
 /*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "renderDom": () => /* binding */ renderDom,
@@ -272,7 +269,6 @@ function rerender() {
 /*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "diff": () => /* binding */ diff,
@@ -468,7 +464,6 @@ function updateInput(patches) {
 /*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "RerenderListener": () => /* binding */ RerenderListener
@@ -498,25 +493,44 @@ const RerenderListener = rerenderApp();
   !*** ./react/utils.js ***!
   \************************/
 /*! namespace exports */
-/*! exports [not provided] [no usage info] */
-/*! runtime requirements:  */
-/***/ (() => {
+/*! export getReactTree [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/rajakedia/Documents/git/react-self/react/utils.js: Unexpected token, expected \",\" (22:16)\n\n\u001b[0m \u001b[90m 20 | \u001b[39m        }\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 21 | \u001b[39m        child\u001b[33m:\u001b[39m [\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 | \u001b[39m            type\u001b[33m:\u001b[39m \u001b[32m'div'\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 23 | \u001b[39m            attr\u001b[33m:\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 24 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 25 | \u001b[39m            }\u001b[33m,\u001b[39m\u001b[0m\n    at Parser._raise (/Users/rajakedia/Documents/git/react-self/node_modules/@babel/parser/lib/index.js:790:17)\n    at Parser.raiseWithData (/Users/rajakedia/Documents/git/react-self/node_modules/@babel/parser/lib/index.js:783:17)\n    at Parser.raise (/Users/rajakedia/Documents/git/react-self/node_modules/@babel/parser/lib/index.js:777:17)\n    at Parser.unexpected (/Users/rajakedia/Documents/git/react-self/node_modules/@babel/parser/lib/index.js:9095:16)\n    at Parser.expect (/Users/rajakedia/Documents/git/react-self/node_modules/@babel/parser/lib/index.js:9081:28)\n    at Parser.parseExprList (/Users/rajakedia/Documents/git/react-self/node_modules/@babel/parser/lib/index.js:11229:14)\n    at Parser.parseArrayLike (/Users/rajakedia/Documents/git/react-self/node_modules/@babel/parser/lib/index.js:11133:26)\n    at Parser.parseExprAtom (/Users/rajakedia/Documents/git/react-self/node_modules/@babel/parser/lib/index.js:10434:23)\n    at Parser.parseExprSubscripts (/Users/rajakedia/Documents/git/react-self/node_modules/@babel/parser/lib/index.js:10094:23)\n    at Parser.parseUpdate (/Users/rajakedia/Documents/git/react-self/node_modules/@babel/parser/lib/index.js:10074:21)");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getReactTree": () => /* binding */ getReactTree
+/* harmony export */ });
+function getReactTree(elem, args) {
+  // let key = 'root';
+  // if(con && con.key) {
+  //     key = con.key;
+  // }
+  // console.log("P: ", key);
+  let dom = null;
+
+  if (!dom) {
+    dom = new elem(args);
+  }
+
+  return new elem(args).getJSX();
+} // export function getJSXwithNewState(elem, args) {
+//     return (new elem(args)).getJSXwithNewState()
+// }
 
 /***/ }),
 
-/***/ "./src2/counter.js":
-/*!*************************!*\
-  !*** ./src2/counter.js ***!
-  \*************************/
+/***/ "./src/counter.js":
+/*!************************!*\
+  !*** ./src/counter.js ***!
+  \************************/
 /*! namespace exports */
 /*! export default [provided] [no usage info] [missing usage info prevents renaming] */
 /*! other exports [not provided] [no usage info] */
 /*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
@@ -571,17 +585,16 @@ class Counter extends _react_Component__WEBPACK_IMPORTED_MODULE_0__.default {
 
 /***/ }),
 
-/***/ "./src2/inputbox.js":
-/*!**************************!*\
-  !*** ./src2/inputbox.js ***!
-  \**************************/
+/***/ "./src/inputbox.js":
+/*!*************************!*\
+  !*** ./src/inputbox.js ***!
+  \*************************/
 /*! namespace exports */
 /*! export default [provided] [no usage info] [missing usage info prevents renaming] */
 /*! other exports [not provided] [no usage info] */
 /*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
@@ -610,17 +623,16 @@ class InputBox extends _react_Component__WEBPACK_IMPORTED_MODULE_0__.default {
 
 /***/ }),
 
-/***/ "./src2/list.js":
-/*!**********************!*\
-  !*** ./src2/list.js ***!
-  \**********************/
+/***/ "./src/list.js":
+/*!*********************!*\
+  !*** ./src/list.js ***!
+  \*********************/
 /*! namespace exports */
 /*! export default [provided] [no usage info] [missing usage info prevents renaming] */
 /*! other exports [not provided] [no usage info] */
 /*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
@@ -668,26 +680,25 @@ class List extends _react_Component__WEBPACK_IMPORTED_MODULE_0__.default {
 
 /***/ }),
 
-/***/ "./src2/main.js":
-/*!**********************!*\
-  !*** ./src2/main.js ***!
-  \**********************/
+/***/ "./src/main.js":
+/*!*********************!*\
+  !*** ./src/main.js ***!
+  \*********************/
 /*! namespace exports */
 /*! export default [provided] [no usage info] [missing usage info prevents renaming] */
 /*! other exports [not provided] [no usage info] */
 /*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _react_Component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../react/Component */ "./react/Component.js");
 /* harmony import */ var _react_CreateElement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../react/CreateElement */ "./react/CreateElement.js");
-/* harmony import */ var _list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./list */ "./src2/list.js");
-/* harmony import */ var _inputbox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./inputbox */ "./src2/inputbox.js");
-/* harmony import */ var _counter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./counter */ "./src2/counter.js");
+/* harmony import */ var _list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./list */ "./src/list.js");
+/* harmony import */ var _inputbox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./inputbox */ "./src/inputbox.js");
+/* harmony import */ var _counter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./counter */ "./src/counter.js");
 /* harmony import */ var _react_utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../react/utils */ "./react/utils.js");
 
 
