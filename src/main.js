@@ -55,16 +55,15 @@ class Main extends Component {
     // }
 
     render() {
-
         return createElement('div', { class: 'container' },
             createElement('div', { class: 'wrapper' },
                 [
                     createElement('div', { class: 'bottom' },
-                    getReactTree(Counter, {}), // <Counter />
+                    this.getReactTree(Counter, {}), // <Counter />
                     ),
                     createElement('div', { class: 'top' },
                         [
-                            getReactTree(InputBox, { value: this.state.value, changeHandler: this.changeHandler }), // <Inputbox value={} />
+                            this.getReactTree(InputBox, { value: this.state.value, changeHandler: this.changeHandler }), // <Inputbox value={} />
                             createElement('button', { class: 'button', onClick: this.clickHandler }, 'Click')
                         ]
                     ),
@@ -72,7 +71,7 @@ class Main extends Component {
                     //     [this.state.value]
                     // ),
                     createElement('div', { class: 'bottom' },
-                        this.state.todoList.map((todo, index) => getReactTree(List, { todo, deleteHandler: this.deleteHandler, index }))
+                        this.state.todoList.map((todo, index) => this.getReactTree(List, { todo, deleteHandler: this.deleteHandler, index }))
                     )
                 ]
             )

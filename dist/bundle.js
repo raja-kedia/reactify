@@ -502,19 +502,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "getReactTree": () => /* binding */ getReactTree
 /* harmony export */ });
-function getReactTree(elem, args) {
-  // let key = 'root';
-  // if(con && con.key) {
-  //     key = con.key;
-  // }
-  // console.log("P: ", key);
-  let dom = null;
+const baseRef = {};
+function getReactTree(elem, args, parent) {
+  const parentContext = parent || baseRef; // if no parent then take baseRef
 
-  if (!dom) {
-    dom = new elem(args);
-  }
+  const childPosition = parent && parentContext.__childSequence || 0;
+  const uniqueKey = elem.name + '__' + childPosition;
+  const comp = parentContext.__childrens && parentContext.__childrens[uniqueKey] || new elem(args);
+  if (!parentContext.__childrens) parentContext.__childrens = {};
+  parentContext.__childrens[uniqueKey] = comp;
+  comp.__childSequence = 0; // reset for proper rendering of comp childs
 
-  return new elem(args).getJSX();
+  parentContext.__childSequence = childPosition + 1;
+  console.log("Context", parentContext);
+  return comp.getJSX();
 } // export function getJSXwithNewState(elem, args) {
 //     return (new elem(args)).getJSXwithNewState()
 // }
@@ -574,7 +575,7 @@ class Counter extends _react_Component__WEBPACK_IMPORTED_MODULE_0__.default {
       class: 'list'
     }, [(0,_react_CreateElement__WEBPACK_IMPORTED_MODULE_1__.createElement)('div', {
       class: 'todo'
-    }, [this.state.value, (0,_react_utils__WEBPACK_IMPORTED_MODULE_2__.getReactTree)(AddButton, {
+    }, [this.state.value, this.getReactTree(AddButton, {
       increment: this.increment
     })])]);
   }
@@ -669,7 +670,7 @@ class List extends _react_Component__WEBPACK_IMPORTED_MODULE_0__.default {
       class: 'list'
     }, [(0,_react_CreateElement__WEBPACK_IMPORTED_MODULE_1__.createElement)('div', {
       class: 'todo'
-    }, [this.props.todo, (0,_react_utils__WEBPACK_IMPORTED_MODULE_2__.getReactTree)(DeleteButton, {
+    }, [this.props.todo, this.getReactTree(DeleteButton, {
       deleteHandler: this.handleDelete
     })])]);
   }
@@ -758,10 +759,10 @@ class Main extends _react_Component__WEBPACK_IMPORTED_MODULE_0__.default {
       class: 'wrapper'
     }, [(0,_react_CreateElement__WEBPACK_IMPORTED_MODULE_1__.createElement)('div', {
       class: 'bottom'
-    }, (0,_react_utils__WEBPACK_IMPORTED_MODULE_5__.getReactTree)(_counter__WEBPACK_IMPORTED_MODULE_4__.default, {}) // <Counter />
+    }, this.getReactTree(_counter__WEBPACK_IMPORTED_MODULE_4__.default, {}) // <Counter />
     ), (0,_react_CreateElement__WEBPACK_IMPORTED_MODULE_1__.createElement)('div', {
       class: 'top'
-    }, [(0,_react_utils__WEBPACK_IMPORTED_MODULE_5__.getReactTree)(_inputbox__WEBPACK_IMPORTED_MODULE_3__.default, {
+    }, [this.getReactTree(_inputbox__WEBPACK_IMPORTED_MODULE_3__.default, {
       value: this.state.value,
       changeHandler: this.changeHandler
     }), // <Inputbox value={} />
@@ -773,7 +774,7 @@ class Main extends _react_Component__WEBPACK_IMPORTED_MODULE_0__.default {
     // ),
     (0,_react_CreateElement__WEBPACK_IMPORTED_MODULE_1__.createElement)('div', {
       class: 'bottom'
-    }, this.state.todoList.map((todo, index) => (0,_react_utils__WEBPACK_IMPORTED_MODULE_5__.getReactTree)(_list__WEBPACK_IMPORTED_MODULE_2__.default, {
+    }, this.state.todoList.map((todo, index) => this.getReactTree(_list__WEBPACK_IMPORTED_MODULE_2__.default, {
       todo,
       deleteHandler: this.deleteHandler,
       index

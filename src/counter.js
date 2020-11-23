@@ -31,7 +31,7 @@ class Counter extends Component {
         return createElement('div', { class: 'list' }, [
             createElement('div', {class: 'todo'} , [
                 this.state.value,
-                getReactTree(AddButton, {increment: this.increment})
+                this.getReactTree(AddButton, {increment: this.increment})
             ])
         ]);
     }

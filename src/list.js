@@ -25,7 +25,7 @@ class List extends Component {
         return createElement('div', {class: 'list'}, [
             createElement('div', {class: 'todo'} , [
                 this.props.todo,
-                getReactTree(DeleteButton, {deleteHandler: this.handleDelete})
+                this.getReactTree(DeleteButton, {deleteHandler: this.handleDelete})
             ])
             
         ]);
